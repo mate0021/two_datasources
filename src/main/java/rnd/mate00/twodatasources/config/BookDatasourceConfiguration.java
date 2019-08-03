@@ -39,9 +39,8 @@ public class BookDatasourceConfiguration {
     
     @Bean
     @Primary
-//    @ConfigurationProperties(prefix = "book.datasource")
     public DataSource bookDataSource() {
-        System.out.println("Configuring book.datasourcec");
+        System.out.println("Configuring book.datasources");
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(driver);
         dataSource.setUrl(url);

@@ -38,7 +38,7 @@ public class SecurityDatasourceConfiguration {
     @Bean
     @ConfigurationProperties(prefix = "security.datasource")
     public DataSource securityDataSource() {
-        System.out.println("Configuring security.datasourcec");
+        System.out.println("Configuring security.datasources");
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(driver);
         dataSource.setUrl(url);
