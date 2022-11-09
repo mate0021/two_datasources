@@ -50,6 +50,15 @@ public class SecurityDatasourceConfiguration {
 
     @Bean
     public LocalContainerEntityManagerFactoryBean securityEntityManagerFactory(EntityManagerFactoryBuilder builder) {
+        // can pass some parameters to the builder:
+/*        Map<String, String> properties = new HashMap<>();
+//        properties.put("hibernate.implicit_naming_strategy",
+//                "org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy");
+//        properties.put("hibernate.physical_naming_strategy",
+//                "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy");
+        properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL8Dialect"); // temporal, for Docker image
+        properties.put("hibernate.ddl-auto", "validate");*/
+            
         return builder
                 .dataSource(securityDataSource())
                 .packages(Role.class, RoleRepository.class)
